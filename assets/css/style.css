@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/pexels-jiarong-deng-1034662.jpg);
+  cursor: url("../img/icons8-coordinates-30.png") auto;
+}
+
+.counteiner {
+  margin: auto;
+  height: 1750px;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.photo-wraper {
+  width: 33%;
+  position: relative;
+  margin: 2px 2px;
+  overflow: hidden;
+}
+
+.photo-wraper::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.3s;
+}
+
+.photo-title {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s;
+  z-index: 3;
+}
+
+.photo-h {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s;
+  z-index: 3;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.photo-wraper:hover .photo {
+  transform: scale(1.1);
+}
+
+.photo-wraper:hover::before {
+  opacity: 1;
+}
+
+.photo-wraper:hover .photo-title {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.photo-wraper:hover .photo-h {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  background-color: rgb(255, 255, 255, 0.3);
+  left: -195px;
+  transition: all 0.3s;
+  border-right: 5px solid #fff;
+  z-index: 5;
+  backdrop-filter: blur(15px);
+}
+
+.nav-link {
+  margin: 10px 15px;
+  padding-left: 5px;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #fff;
+  height: 35px;
+  text-decoration: none;
+  border-left: 2px solid #fff;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.q {
+  margin-top: 100%;
+}
+
+.nav:hover {
+  left: 0px;
+}
+
+.nav-link:hover {
+  padding-left: 10px;
+}
